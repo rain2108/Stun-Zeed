@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet">
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:white;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    height:145px;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    justify-self: flex-start;
+    z-index: 99;
+    text-transform: uppercase;
+}
+
+#nav img{
+    height: 75px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ 
+#bvideo{
+
+    margin-top: -25%;
+    height: 50%;
+    width: 50%;
+    object-fit:cover;
+    position: fixed;
+} 
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Maintain the original color */
+}
+#page1{
+    height: 100vh;
+    
+    width: 100%;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1{
+    font-size: 140px;
+    font-weight: 900;
+}
+
+
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#page1 p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+  }
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  #scroller h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 20px;
+    transition: all linear 0.3s;
+    color: white;
+    -webkit-text-stroke: 2px #ffffff;
+  }
+  #scroller h4:hover {
+    color:#FFCE1F;
+    -webkit-text-stroke: 2px #FFCE1F;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+
+  #about-us {
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: space-around;
+  }
+  #about-us img {
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  #about-us-in {
+    width: 50%;
+    text-align: center;
+  }
+  #about-us-in h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  #about-us-in p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+
+  #cards-container {
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+  }
+  .card {
+    height: 80%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+  }
+  #card1 {
+    background-image: url(https://images.unsplash.com/photo-1578326626553-39f72c545b07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHdpbGRsaWZlfGVufDB8fDB8fHww);
+  }
+  #card2 {
+    background-image: url(https://images.unsplash.com/photo-1615963244664-5b845b2025ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fHdpbGRsaWZlfGVufDB8fDB8fHww);
+  }
+  #card3 {
+    background-image: url(https://images.unsplash.com/photo-1511216113906-8f57bb83e776?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHdpbGRsaWZlfGVufDB8fDB8fHww);
+  }
+  
+
+
+  #offers{
+    height: 30vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color:#FFDF6C;
+  }
+
+  #offers h2{
+    width:50%;
+    font-size: 23px;
+    text-transform: uppercase;
+    justify-content: center;
+    color: #000;
+  }
+  @media screen and (max-width: 600px){
+    h1{
+      font-size: 70px;
+      line-height: 50px;
+      font-weight: 450;
+    }
+    h2{
+      font-size: 36px;
+      line-height: 50px;
+    }
+  }
+    </style>
+</head>
+<body >
+    <div id="nav">
+        <img src=" " alt="">
+        <div id="h4">ZOO DARSHAN</div>
+
+        <div id="h4"><a href="">Pricing</a></div>
+        <div id="h4"><a href="">gift cards</a></div>
+        <div id="h4"><a href="">events</a></div>
+        <div id="h4"><a href="/blog">blog</a></div>
+        <div id="h4"><a href="/login">login</a></div>
+        <div id="h4"><a href="/login">Sign up</a></div>
+    </div>
+    <!-- <video autoplay loop muted src="/public/video.mp4"></video> -->
+    <div id="bvideo">
+    <img src ="https://images.unsplash.com/photo-1555169062-013468b47731?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+    <div id="main">
+        <div id="page1">
+            <h1>EAT.WATCH.SLEEP.</h1>
+            <h2>Welcome to ZOO DARSHAN</h2>
+            <p>India's first online streaming platfom for ZOO</p>
+        </div>
+        <div id="page2">
+            <div id="scroller">
+                <div id="scroller-in">
+                  <h4>BOOK</h4>
+                  <h4>YOUR</h4>
+                  <h4>TICKIT</h4>
+                  <h4>NOW</h4>
+                  
+                </div>
+                <div id="scroller-in">
+                    <h4>BOOK</h4>
+                    <h4>YOUR</h4>
+                    <h4>TICKIT</h4>
+                    <h4>NOW</h4>
+                  
+                </div>
+              </div>
+
+              <div id="about-us">
+                <img
+                  src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9ua2V5fGVufDB8fDB8fHww"
+                  alt=""
+                />
+                <div id="about-us-in">
+                  <h3>ABOUT US</h3>
+                  <p>
+                    Welcome to ZOO DARSHAN Live Stream! We're thrilled to offer a front-row seat to the amazing world of our animals, all from the comfort of your own home.
+
+                    This app is your window into the fascinating lives of our creatures. We believe in the power of education and wonder that animals inspire, and we hope these live streams spark curiosity and ignite a passion for the natural world.
+                  </p>
+                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1542997830-49fc838e4c61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGRlZXJ8ZW58MHx8MHx8fDA%3D"
+                  alt=""
+                />
+              </div>
+              
+              <div id="cards-container">
+                <div class="card" id="card1">
+                  <div class="overlay">
+                    <h4></h4>
+                    <p>
+                      
+
+
+                    </p>
+                  </div>
+                </div>
+                <div class="card" id="card2">
+                  <div class="overlay">
+                    <h4></h4>
+                    <p>
+                      
+                        
+
+                    </p>
+                  </div>
+                </div>
+                <div class="card" id="card3">
+                  <div class="overlay">
+                    <h4></h4>
+                    <p>
+                      
+                        
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="offers">
+                <h2>SIGN UP NOW TO AVAIL SPECIAL OFFERS Or miss out now !!</h2>
+              </div>
+        </div>
+    </div>
+
+
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    gsap.to("#nav",{
+  backgroundColor:"#",
+  duration:0.5,
+  height:"110px",
+  scrollTrigger:{
+    trigger:"#nav",
+    scroller:"body",
+    markers:false,
+    start:"top -10%",
+    end:"top -11%",
+    scrub:2,
+  }
+
+})
+
+gsap.to("#main",{
+  backgroundColor:"#000",
+  scrollTrigger:{
+    trigger:"#main",
+    scroller:"body",
+    markers:false,
+    start:"top -30%",
+    end:"top -100%",
+    scrub:2
+  }
+})</script>
+   <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "XdmEfdJPy92dB8sIv4y8Y",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="XdmEfdJPy92dB8sIv4y8Y"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+</html>

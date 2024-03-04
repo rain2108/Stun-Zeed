@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 exports.connectMongoose = () => {
-    mongoose.connect("mongodb+srv://jainrajat5343:NURmcKvMXNbJoZUc@testcluster.s3xmnfg.mongodb.net/")
+    mongoose.connect("mongodb://localhost:27017/authdata")
     .then((e) => console.log(`connected to mongoDB: ${e.connection.host}`))
     .catch((e) => console.log(e));
 }

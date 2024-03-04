@@ -5,7 +5,7 @@ const pug = require('pug');
 const passport = require('passport');
 const { initializingPassport, isAuthenticated } = require('./passportConfig.js');
 const expressSession = require('express-session')
-
+app.use(express.static('public'));
 connectMongoose();
 
 initializingPassport(passport);
@@ -25,17 +25,22 @@ app.use(passport.session());
 
 app.set("view engine", "pug");
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
 
-app.get('/register', (req, res) => {
-    console.log('ok')
-    res.render('register');
+
+
+app.get('/home', (req, res) => {
+    res.sendFile(__dirname+"/views/home.html");
 })
 
+
+
+
 app.get('/login', (req, res) => {
-    res.render('login');
+    res.sendFile(__dirname+"/views/userLogin.html");
+})
+
+app.get('/blog', (req, res) => {
+    res.sendFile(__dirname+"/views/blog.html");
 })
 
 app.post('/register', async (req, res) => {
